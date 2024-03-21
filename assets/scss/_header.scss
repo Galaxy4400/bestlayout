@@ -40,6 +40,9 @@
 			display: flex;
 			align-items: center;
 			gap: rem(58);
+			@media (max-width: em($md3)) {
+				gap: rem(20);
+			}
 		}
 	}
 	// .header__logo
@@ -56,6 +59,39 @@
 	// .header__menu
 	&__menu {
 	}
+	// .header__contacts
+	&__contacts {
+		display: flex;
+		align-items: center;
+	}
+	// .header__phone
+	&__phone {
+		font-family: 'Prosto One';
+		@include adaptiv-value(font-size, 20, 16, 1);
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		white-space: nowrap;
+		&::before {
+			@media (min-width: em($md3+1)) {
+				transform: translateY(rem(-2));
+			}
+		}
+		@media (max-width: em($md3)) {
+			font-size: 0px;
+			gap: rem(0);
+			&::before {
+				font-size: rem(20);
+				border: rem(2) solid #fff;
+				border-radius: rem(11);
+				height: rem(46);
+				width: rem(46);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
 	// .header__actions
 	&__actions {
 		display: flex;
@@ -67,8 +103,8 @@
 	}
 	// .header__btn
 	&__btn {
-		@media (max-width: em(570)) {
-			display: none;
+		@media (max-width: em($md4)) {
+			padding: rem(3) rem(15);
 		}
 	}
 }

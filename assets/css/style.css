@@ -7024,12 +7024,19 @@ textarea.input {
 .logo {
   position: relative;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   white-space: nowrap;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
-@media (max-width: 1430px) {
+@media (max-width: 61.9375em) {
   .logo {
-    font-size: calc(30px + 10 * (100vw - 320px) / 1110);
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 34.375em) {
+  .logo {
+    font-size: 2.5rem;
   }
 }
 .logo::after {
@@ -7040,10 +7047,27 @@ textarea.input {
   width: 100%;
   height: 0.25rem;
   background: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 1430px) {
   .logo::after {
     bottom: calc(-12px + -8 * (100vw - 320px) / 1110);
+  }
+}
+._scroll .logo {
+  font-size: 1.875rem;
+  -webkit-transform: translateY(-0.1875rem);
+      -ms-transform: translateY(-0.1875rem);
+          transform: translateY(-0.1875rem);
+}
+._scroll .logo::after {
+  bottom: -0.75rem;
+  height: 0.1875rem;
+}
+@media (max-width: 34.375em) {
+  .logo span {
+    display: none;
   }
 }
 
@@ -7120,6 +7144,11 @@ textarea.input {
           align-items: center;
   gap: 3.625rem;
 }
+@media (max-width: 47.9375em) {
+  .header__column_actions {
+    gap: 1.25rem;
+  }
+}
 .header__logo {
   -webkit-transform: translateY(0.375rem);
       -ms-transform: translateY(0.375rem);
@@ -7135,6 +7164,60 @@ textarea.input {
           transform: translateY(0rem);
   max-width: 9.375rem;
 }
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__phone {
+  font-family: "Prosto One";
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  white-space: nowrap;
+}
+@media (max-width: 1430px) {
+  .header__phone {
+    font-size: calc(16px + 4 * (100vw - 320px) / 1110);
+  }
+}
+@media (min-width: 48em) {
+  .header__phone::before {
+    -webkit-transform: translateY(-0.125rem);
+        -ms-transform: translateY(-0.125rem);
+            transform: translateY(-0.125rem);
+  }
+}
+@media (max-width: 47.9375em) {
+  .header__phone {
+    font-size: 0px;
+    gap: 0rem;
+  }
+  .header__phone::before {
+    font-size: 1.25rem;
+    border: 0.125rem solid #fff;
+    border-radius: 0.6875rem;
+    height: 2.875rem;
+    width: 2.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .header__actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7149,9 +7232,9 @@ textarea.input {
     gap: 0.9375rem;
   }
 }
-@media (max-width: 35.625em) {
+@media (max-width: 29.9375em) {
   .header__btn {
-    display: none;
+    padding: 0.1875rem 0.9375rem;
   }
 }
 
@@ -7600,11 +7683,6 @@ textarea.input {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (max-width: 61.9375em) {
-  .main-head {
-    height: auto;
-  }
-}
 .main-head__title {
   margin: 0px 0px 1.25rem 0px;
 }
@@ -7630,9 +7708,6 @@ textarea.input {
   .main-head__label {
     padding: 0;
   }
-  .main-head__label br {
-    display: none;
-  }
 }
 
 .main-body {
@@ -7652,7 +7727,7 @@ textarea.input {
   position: relative;
   font-size: 1.5rem;
   font-weight: 300;
-  max-width: 360px;
+  max-width: 430px;
   line-height: 120%;
   margin: 0px 0px 4.375rem 0px;
 }
@@ -7966,7 +8041,7 @@ textarea.input {
   position: absolute;
   width: 0.0625rem;
   height: calc(100% + 1.875rem);
-  background: #585c6a;
+  background: var(--color-second);
 }
 .sticky__quote-text::before {
   bottom: 0;
@@ -8034,9 +8109,18 @@ textarea.input {
 .sticky-nav__item {
   border-top: 0.0625rem dashed rgb(88, 92, 106);
   padding: 0.625rem 0px;
+  font-size: 0.875rem;
 }
 .sticky-nav__link {
   font-size: 0.875rem;
+  cursor: default;
+}
+@media (any-hover: hover) {
+  .sticky-nav__link:hover {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: var(--color-second);
+  }
 }
 
 .sticky-persone {
