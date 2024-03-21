@@ -8058,6 +8058,8 @@ textarea.input {
   top: 0;
   left: 0;
   z-index: -2;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 .sticky__bg._sticky-in {
   position: fixed;
