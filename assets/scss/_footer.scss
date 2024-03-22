@@ -5,6 +5,8 @@
 	}
 	// .footer__body
 	&__body {
+		padding: rem(60) 0px 0px 0px;
+		border-top: rem(1) solid #585C6A;
 		position: relative;
 	}
 	// .footer__info
@@ -88,12 +90,6 @@
 
 //---------------------------------------------------------------
 .footer-info {
-	@media (min-width: em($md2+1)) {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		margin: 0px 0px rem(20) 0px;
-	}
 	// .footer-info__socials
 	&__socials {
 		display: flex;

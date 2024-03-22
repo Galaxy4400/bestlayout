@@ -280,6 +280,14 @@
 		}
 	}
 
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				background: var(--color-second);
+			}
+		}
+	}
+
 	span {
 		@media (max-width: em(550)) {
 			display: none;

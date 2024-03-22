@@ -7065,6 +7065,11 @@ textarea.input {
   bottom: -0.75rem;
   height: 0.1875rem;
 }
+@media (any-hover: hover) {
+  .logo:hover::after {
+    background: var(--color-second);
+  }
+}
 @media (max-width: 34.375em) {
   .logo span {
     display: none;
@@ -7538,6 +7543,8 @@ textarea.input {
   padding: 0rem 0rem 7.5rem;
 }
 .footer__body {
+  padding: 3.75rem 0px 0px 0px;
+  border-top: 0.0625rem solid #585C6A;
   position: relative;
 }
 .footer-menu {
@@ -7619,14 +7626,6 @@ textarea.input {
   font-weight: 300;
 }
 
-@media (min-width: 62em) {
-  .footer-info {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0px 0px 1.25rem 0px;
-  }
-}
 .footer-info__socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7658,6 +7657,19 @@ textarea.input {
   -webkit-text-fill-color: transparent;
 }
 
+.main {
+  position: relative;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -4;
+}
 .main__bacground {
   position: fixed;
   top: 0;
@@ -8057,17 +8069,24 @@ textarea.input {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: -5;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
 }
-.sticky__bg._sticky-in {
-  position: fixed;
+@media (min-width: 62em) {
+  .sticky__bg._sticky-in {
+    position: fixed;
+  }
+  .sticky__bg._sticky-out {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+  }
 }
-.sticky__bg._sticky-out {
-  position: absolute;
-  top: unset;
-  bottom: 0;
+@media (max-width: 61.9375em) {
+  .sticky__bg {
+    position: fixed;
+  }
 }
 
 .sticky-nav {
