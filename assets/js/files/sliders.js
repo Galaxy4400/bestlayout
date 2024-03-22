@@ -38,7 +38,7 @@ document.querySelectorAll('[data-swiper]').forEach(slider => {
 /**
  * Инициализация слайдера
  */
-const actualSlider = new Swiper('.actual-slider', {
+const actualSlider = new Swiper('.works-slider', {
 	speed: 1500,
 	slidesPerView: 'auto',
 });
