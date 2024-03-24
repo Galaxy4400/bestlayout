@@ -1700,14 +1700,14 @@ swiper-container .swiper-notification {
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-  height: 0.625rem;
+  height: 0.375rem;
 }
 
 .noUi-horizontal .noUi-handle {
   width: 1.25rem;
   height: 1.25rem;
   right: -0.625rem;
-  top: -0.375rem;
+  top: -0.5rem;
 }
 
 .noUi-vertical {
@@ -1730,9 +1730,8 @@ swiper-container .swiper-notification {
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-  background: #ffffff;
+  background: #1c1c1c;
   border-radius: 0.25rem;
-  border: 0.0625rem solid #d8d8d8;
 }
 
 .noUi-connects {
@@ -1740,7 +1739,8 @@ swiper-container .swiper-notification {
 }
 
 .noUi-connect {
-  background: var(--color-main-light);
+  background: -webkit-gradient(linear, left top, right top, from(var(--color-gradient-11)), to(var(--color-gradient-22)));
+  background: linear-gradient(90deg, var(--color-gradient-11), var(--color-gradient-22));
 }
 
 /* Handles and cursors;
@@ -6481,8 +6481,8 @@ textarea.input {
   left: -1.875em;
   width: 1.25em;
   height: 1.25em;
-  background: #ffffff;
-  border: 0.0625rem solid #cccccc;
+  background: #1c1c1c;
+  border: 0.0625rem solid #1c1c1c;
   border-radius: 0.25rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -6536,25 +6536,25 @@ textarea.input {
 .radio_default .radio__mark::before {
   content: "";
   position: absolute;
-  top: -0.125em;
+  top: 0em;
   left: -1.875em;
   width: 1.25em;
   height: 1.25em;
   border-radius: 50%;
-  border: 0.0625rem solid #cccccc;
-  background: #ffffff;
+  border: 0.0625rem solid #1c1c1c;
+  background: #1c1c1c;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 .radio_default .radio__mark::after {
   content: "";
   position: absolute;
-  top: 0.125em;
+  top: 0.25em;
   left: -1.625em;
   width: 0.75em;
   height: 0.75em;
   border-radius: 50%;
-  background: var(--color-main);
+  background: var(--color-second);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   -webkit-transform: scale(0);
@@ -6563,9 +6563,9 @@ textarea.input {
   opacity: 0;
 }
 .radio_default._checked .radio__mark::after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 1;
 }
 .radio_default._error .radio__mark::before {
@@ -6724,6 +6724,13 @@ textarea.input {
   display: grid;
   justify-items: start;
   grid-gap: 1rem;
+}
+.form__radio-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+  margin: 0px 0px -0.625rem 0px;
 }
 .form__label-title {
   cursor: pointer;
@@ -7095,6 +7102,19 @@ textarea.input {
 ._loaded .loader {
   opacity: 0;
   visibility: hidden;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.875rem;
+  border-radius: 62.4375rem;
+}
+.tag_blue {
+  background: var(--color-main);
+}
+.tag_red {
+  background: var(--color-second);
 }
 
 .header {
@@ -7540,6 +7560,7 @@ textarea.input {
 }
 
 .footer {
+  background: #000;
   padding: 0rem 0rem 7.5rem;
 }
 .footer__body {
@@ -7649,6 +7670,10 @@ textarea.input {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 0.1875rem;
+}
+.footer-info__logo {
+  font-weight: 700;
+  margin: 0px 0px 0.3125rem 0px;
 }
 .social {
   font-size: 2.5rem;
@@ -7909,6 +7934,11 @@ textarea.input {
 .sticky__content_left {
   display: grid;
   grid-gap: 6.25rem;
+}
+@media (max-width: 47.9375em) {
+  .sticky__content_left {
+    grid-gap: 3.125rem;
+  }
 }
 .sticky__content_right {
   display: grid;
@@ -8261,8 +8291,16 @@ textarea.input {
   overflow: visible;
   cursor: pointer;
 }
+.works-slider__slides {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.works-slider__slide {
+  height: auto;
+}
+
 .works-slide {
-  display: grid;
   max-width: 26.625rem;
   padding: 0px 2.5rem 0px 0px;
 }
@@ -8275,13 +8313,16 @@ textarea.input {
 @media (max-width: 47.9375em) {
   .works-slide {
     max-width: 22.5rem;
-    padding: 0px 2.5rem 0px 0px;
+    padding: 0px 1.25rem 0px 0px;
   }
 }
 @media (max-width: 29.9375em) {
   .works-slide {
-    padding: 0px 1.25rem 0px 0px;
+    max-width: 21.25rem;
   }
+}
+.works-slide__body {
+  display: grid;
 }
 .works-slide__content {
   display: grid;
@@ -8337,7 +8378,7 @@ textarea.input {
       -ms-flex-order: 1;
           order: 1;
   padding-bottom: 56.25%;
-  margin: 0px 0px 2.1875rem 0px;
+  margin: 0px 0px 1.25rem 0px;
   overflow: hidden;
 }
 @media (max-width: 29.9375em) {
@@ -8353,10 +8394,29 @@ textarea.input {
   transition: all 0.5s ease 0s;
 }
 @media (any-hover: hover) {
-  .works-slide:hover .works-slide__img img {
+  .works-slide__img:hover img {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
+  }
+}
+.works-slide_fake {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4.375rem 0px 0px 0px;
+}
+.works-slide_fake .works-slide__title {
+  text-align: center;
+  color: var(--color-main);
+  font-size: 32px;
+}
+@media (max-width: 1430px) {
+  .works-slide_fake .works-slide__title {
+    font-size: calc(24px + 8 * (100vw - 320px) / 1110);
   }
 }
 

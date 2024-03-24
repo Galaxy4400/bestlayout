@@ -272,8 +272,8 @@ textarea.input {
 				left: em(-30);
 				width: em(20);
 				height: em(20);
-				background: #ffffff;
-				border: rem(1) solid #cccccc;
+				background: #1c1c1c;
+				border: rem(1) solid #1c1c1c;
 				border-radius: rem(4);
 				transition: all 0.3s ease 0s;
 			}
@@ -346,24 +346,24 @@ textarea.input {
 			&::before {
 				content: '';
 				position: absolute;
-				top: em(-2);
+				top: em(0);
 				left: em(-30);
 				width: em(20);
 				height: em(20);
 				border-radius: 50%;
-				border: rem(1) solid #cccccc;
-				background: #ffffff;
+				border: rem(1) solid #1c1c1c;
+				background: #1c1c1c;
 				transition: all 0.3s ease 0s;
 			}
 			&::after {
 				content: '';
 				position: absolute;
-				top: em(2);
+				top: em(4);
 				left: em(-26);
 				width: em(12);
 				height: em(12);
 				border-radius: 50%;
-				background: var(--color-main);
+				background: var(--color-second);
 				transition: all 0.3s ease 0s;
 				transform: scale(0);
 				opacity: 0;
@@ -371,7 +371,7 @@ textarea.input {
 		}
 		&._checked {
 			.radio__mark::after {
-				transform: scale(1);
+				transform: scale(1.5);
 				opacity: 1;
 			}
 		}
@@ -557,6 +557,12 @@ textarea.input {
 		display: grid;
 		justify-items: start;
 		grid-gap: rem(16);
+	}
+	// .form__radio-group
+	&__radio-group {
+		display: flex;
+		gap: rem(30);
+		margin: 0px 0px rem(-10) 0px;
 	}
 	// .form__label
 	&__label {

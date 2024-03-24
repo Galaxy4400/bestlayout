@@ -316,3 +316,20 @@
 		visibility: hidden;
 	}
 }
+
+
+//===============================================================
+.tag {
+	display: inline-block;
+	padding: rem(2) rem(10);
+	font-size: rem(14);
+	border-radius: rem(999);
+	// .tag_blue
+	&_blue {
+		background: var(--color-main);
+	}
+	// .tag_red
+	&_red {
+		background: var(--color-second);
+	}
+}

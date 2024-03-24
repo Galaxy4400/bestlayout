@@ -130,7 +130,7 @@ document.querySelectorAll('input[data-file]').forEach(input => {
 	// Объект локализации для текста кнопки
 	const fileButtonLocalization = {
 		English: 'Choose File',
-		Russian: 'Перетащите или прикрепите файл',
+		Russian: 'Прикрепите файл',
 	};
 
 	const inputContainer = document.createElement('label');
@@ -326,7 +326,7 @@ document.querySelectorAll('[data-slider]').forEach((range) => {
 		const suffix = range.dataset.suffix ? ` ${range.dataset.suffix}` : '';
 		if (values.length == 1) {
 			const label = range.dataset.label ? range.dataset.label : rangeLocalization['value'][LOCALIZATION];
-			rangeLabel.innerHTML = `${label}: ${addZeroes(values[0], rangeFraction)}${suffix}`;
+			rangeLabel.innerHTML = `${label}: ${new Intl.NumberFormat('ru-RU').format(addZeroes(values[0], rangeFraction))}${suffix}`;
 		} else {
 			const label = range.dataset.label ? range.dataset.label + ': ' : '';
 			const value = values.map(value => addZeroes(value, rangeFraction)).join(' '+rangeLocalization['to'][LOCALIZATION]+' ');

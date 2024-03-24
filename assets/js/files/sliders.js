@@ -44,16 +44,6 @@ const actualSlider = new Swiper('.works-slider', {
 });
 
 
-/**
- * Инициализация слайдера
- */
-const sliderClients = new Swiper('.slider-clients', {
-	speed: 1500,
-	slidesPerView: 'auto',
-});
-
-
-
 
 
 // /**
