@@ -295,41 +295,18 @@
 	}
 }
 
-
-//===============================================================
-.loader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	background: #000;
-	background-image: url('../img/main-loading.gif');
-	background-repeat: no-repeat;
-	background-position: center;
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.3s ease 0s;
-	._loaded & {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-
-
 //===============================================================
 .tag {
 	display: inline-block;
 	padding: rem(2) rem(10);
 	font-size: rem(14);
 	border-radius: rem(999);
-	// .tag_blue
-	&_blue {
+	// .tag_1
+	&_1 {
 		background: var(--color-main);
 	}
-	// .tag_red
-	&_red {
+	// .tag_2
+	&_2 {
 		background: var(--color-second);
 	}
 }

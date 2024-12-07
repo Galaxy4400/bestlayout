@@ -60,36 +60,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-env:before {
+  content: "\e901";
+}
+
+._icon-youtube:before {
+  content: "\e908";
+}
+
+._icon-close:before {
+  content: "\e909";
+}
+
 ._icon-vk:before {
   content: "\e900";
-}
-
-._icon-env:before {
-  content: "\e903";
-}
-
-._icon-mark:before {
-  content: "\e906";
 }
 
 ._icon-phone:before {
   content: "\e907";
 }
 
-._icon-check:before {
-  content: "\e90d";
-}
-
-._icon-arrow:before {
-  content: "\e917";
-}
-
-._icon-down:before {
-  content: "\e90f";
-}
-
-._icon-close:before {
-  content: "\e904";
+._icon-tg:before {
+  content: "\e90a";
 }
 
 * {
@@ -403,11 +395,18 @@ a[data-modal-opener] {
 #modal .modal-request__title {
   text-align: center;
   font-size: 24px;
+  margin: 0px 0px 1.125rem 0px;
 }
 @media (max-width: 1430px) {
   #modal .modal-request__title {
     font-size: calc(20px + 4 * (100vw - 320px) / 1110);
   }
+}
+#modal .modal-request__text {
+  text-align: right;
+  font-size: 1.125rem;
+  font-family: "Prosto One";
+  line-height: 1.2;
 }
 
 .swiper,
@@ -5955,13 +5954,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 /**
  * Устанавливает блоку бекграунд с анимацией загрузки
  */
-._loading {
-  background: #000000;
-  background-image: url("../img/loading.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /**
  * Скрывает блок, но оставляет видимым для семантики
  */
@@ -6372,7 +6364,7 @@ textarea {
 textarea.input {
   resize: none;
   padding: 0.65em 1.15em;
-  min-height: 6.3em;
+  min-height: 5em;
 }
 
 /**
@@ -6384,7 +6376,7 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 7.875rem;
+  height: 5rem;
   padding: 0.625em 0.75em;
   border: 0.125rem dotted #000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000)) padding-box, -webkit-gradient(linear, left top, right top, from(var(--color-gradient-11)), to(var(--color-gradient-22))) border-box;
@@ -6675,6 +6667,30 @@ textarea.input {
    * Кастомные стили форм
    */
 }
+.form::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/loading.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.form._loading {
+  position: relative;
+  pointer-events: none;
+}
+.form._loading::after {
+  opacity: 1;
+  visibility: visible;
+}
 .form span.form__label-title {
   display: inline-block;
 }
@@ -6741,6 +6757,11 @@ textarea.input {
   content: attr(data-req);
   color: var(--color-error);
   margin: 0px 0px 0px 0.1875rem;
+}
+.form__validate-error {
+  color: var(--color-error);
+  font-style: italic;
+  font-size: 0.875rem;
 }
 .form__error-label {
   font-size: 0.875rem;
@@ -7083,37 +7104,16 @@ textarea.input {
   }
 }
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background: #000;
-  background-image: url("../img/main-loading.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-._loaded .loader {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .tag {
   display: inline-block;
   padding: 0.125rem 0.625rem;
   font-size: 0.875rem;
   border-radius: 62.4375rem;
 }
-.tag_blue {
+.tag_1 {
   background: var(--color-main);
 }
-.tag_red {
+.tag_2 {
   background: var(--color-second);
 }
 
@@ -7123,14 +7123,11 @@ textarea.input {
   left: 0;
   width: 100%;
   z-index: 50;
-  background-color: transparent;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
-.header._scroll {
-  background-color: rgba(0, 0, 0, 0.7);
-}
 .header__body {
+  position: relative;
   padding: 0.9375rem 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7146,6 +7143,21 @@ textarea.input {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.header__body::before {
+  content: "";
+  position: absolute;
+  width: 624.9375rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
 @media (max-width: 29.9375em) {
   .header__body {
     gap: 0.9375rem;
@@ -7154,6 +7166,9 @@ textarea.input {
 .header._scroll .header__body {
   height: 4.375rem;
   padding: 0.625rem 0px;
+}
+.header._scroll .header__body::before {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .header__column {
   display: -webkit-box;
@@ -7721,7 +7736,18 @@ textarea.input {
           justify-content: center;
 }
 .main-head__title {
-  margin: 0px 0px 1.25rem 0px;
+  display: grid;
+  line-height: 115%;
+  margin: 0px 0px 0.9375rem 0px;
+}
+.main-head__title span:nth-child(2) {
+  padding: 0px 0px 0px 30%;
+  font-size: 100px;
+}
+@media (max-width: 1430px) {
+  .main-head__title span:nth-child(2) {
+    font-size: calc(45px + 55 * (100vw - 320px) / 1110);
+  }
 }
 .main-head__label {
   font-family: "Prosto One";
@@ -7734,7 +7760,7 @@ textarea.input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0px 30% 0px 0px;
+  padding: 0px 17% 0px 0px;
 }
 @media (max-width: 1430px) {
   .main-head__label {
@@ -8177,11 +8203,11 @@ textarea.input {
 .sticky-persone {
   position: relative;
   max-width: 235px;
-  margin: 0px 0px 0px 9.375rem;
+  margin: 0px 0px 0px 3.125rem;
 }
-@media (max-width: 90.125em) {
+@media (max-width: 75em) {
   .sticky-persone {
-    margin: 0px 0px 0px 3.125rem;
+    margin: 0px 0px 0px 0px;
   }
 }
 .sticky-persone__name {
@@ -8206,47 +8232,25 @@ textarea.input {
 }
 .sticky-persone__photo {
   position: absolute;
-  bottom: -200px;
-  right: -290px;
   z-index: 3;
+  top: -1.25rem;
+  right: -12.5rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--color-second);
+  overflow: hidden;
+  background: #fff;
 }
-@media (max-width: 90.125em) {
+@media (max-width: 75em) {
   .sticky-persone__photo {
-    bottom: -210px;
-    right: -230px;
+    right: -11.25rem;
   }
 }
-@media (max-width: 47.9375em) {
-  .sticky-persone__photo {
-    bottom: -100px;
-  }
-}
-@media (max-width: 47.9375em) {
-  .sticky-persone__photo {
-    bottom: -130px;
-  }
-}
-@media (min-height: 1100px) {
-  .sticky-persone__photo {
-    bottom: -130px;
-    -webkit-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
-@media (min-height: 1200px) {
-  .sticky-persone__photo {
-    bottom: -25px;
-  }
-}
-@media (min-height: 1400px) {
-  .sticky-persone__photo {
-    bottom: 75px;
-    right: -360px;
-    -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-            transform: scale(2);
-  }
+.sticky-persone__image {
+  -webkit-transform: scale(1.4) translate(7px, 15px);
+      -ms-transform: scale(1.4) translate(7px, 15px);
+          transform: scale(1.4) translate(7px, 15px);
 }
 
 .works {

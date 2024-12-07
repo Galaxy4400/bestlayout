@@ -2,21 +2,34 @@
 <html lang="ru">
 
 <head>
-	<title>Best Layout</title>
+	<title>Заказать верстку сайтов — BestLayout</title>
+	<meta name="description" content="Предоставляю услугу по верстке сайтов: адаптивность, кросбраузерность, чистый код по методологии БЭМ, pixel-perfect...">
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="assets/css/style.css?v=4">
-	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Заказать верстку сайтов — BestLayout">
+	<meta property="og:description" content="Предоставляю услугу по верстке сайтов: адаптивность, кросбраузерность, чистый код по методологии БЭМ, pixel-perfect...">
+	<meta property="og:url" content="https://bestlayout.ru/">
+	<meta property="og:site_name" content="BestLayout">
+	<meta property="og:image" content="assets/img/og_img.jpg">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:image:type" content="image/jpeg">
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="stylesheet" href="assets/css/style.css?v=4">
+
 	<script>
-		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+		const LOCALIZATION = 'Russian';
 	</script>
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header" data-fix data-aos="fade-down" data-aos-delay="500">
+		<header class="header" data-fix data-aos="fade-down" data-aos-delay="800">
 			<div class="header__container _container">
 				<div class="header__body">
 					<div class="header__column header__column_logo">
@@ -33,25 +46,28 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<main class="page">
 			<section class="page__section main">
 				<div class="main__container _container">
 					<div class="main__head main-head">
-						<h1 class="main-head__title" data-aos="fade-right" data-aos-delay="800">Эксперт</h1>
-						<p class="main-head__label" data-aos="fade-up" data-aos-delay="1000">по верске сайтов<br>любой сложности</p>
+						<h1 class="main-head__title">
+							<span data-aos="fade-right" data-aos-delay="200">Вёрстка</span>
+							<span data-aos="fade-right" data-aos-delay="400">сайтов</span>
+						</h1>
+						<p class="main-head__label" data-aos="fade-right" data-aos-delay="600">любой сложности</p>
 					</div>
 					<div class="main__content main-body">
 						<h2 class="main-body__title main-body-title">
-							<div class="main-body-title__first">
+							<span class="main-body-title__first">
 								<span data-aos="fade-right">Идеальная</span><span data-aos="fade-right">вёрстка</span>
-							</div>
-							<div class="main-body-title__second">
+							</span>
+							<span class="main-body-title__second">
 								<span data-aos="fade-left">идеального</span><span data-aos="fade-left">сайта</span>
-							</div>
+							</span>
 						</h2>
 						<div class="main-body__content" data-aos="fade-up">
-							<div class="main-body__text">Доверьте ваш дизайн профессионалу, и даже самые смелые идеи будут воплощены в реальность</div>
+							<p class="main-body__text">Доверьте ваш дизайн профессионалу, и даже самые смелые идеи будут воплощены в реальность</p>
 							<button class="main-body__btn btn btn_gradient" type="button" data-goto="request">Заказать верску</button>
 						</div>
 					</div>
@@ -74,33 +90,33 @@
 						<div class="advantages__cards" data-aos="fade-up">
 							<div class="advantages__card advantages-card">
 								<h5 class="advantages-card__title">Выгоднее, чем корпоративная разработка</h5>
-								<div class="advantages-card__img">
-									<img src="assets/img/adv1.png" alt="">
-								</div>
+								<figure class="advantages-card__img">
+									<img src="assets/img/adv1.png" alt="adv1.png">
+								</figure>
 							</div>
 							<div class="advantages__card advantages-card">
 								<h5 class="advantages-card__title">Пунктуальность и ответственность</h5>
-								<div class="advantages-card__img">
-									<img src="assets/img/adv4.png" alt="">
-								</div>
+								<figure class="advantages-card__img">
+									<img src="assets/img/adv4.png" alt="adv4.png">
+								</figure>
 							</div>
 							<div class="advantages__card advantages-card">
 								<h5 class="advantages-card__title">Гарантия безопасной сделки</h5>
-								<div class="advantages-card__img">
-									<img src="assets/img/adv3.png" alt="">
-								</div>
+								<figure class="advantages-card__img">
+									<img src="assets/img/adv3.png" alt="adv3.png">
+								</figure>
 							</div>
 							<div class="advantages__card advantages-card">
 								<h5 class="advantages-card__title">Высокий уровень поддержки</h5>
-								<div class="advantages-card__img">
-									<img src="assets/img/adv5.png" alt="">
-								</div>
+								<figure class="advantages-card__img">
+									<img src="assets/img/adv5.png" alt="adv5.png">
+								</figure>
 							</div>
 							<div class="advantages__card advantages-card">
 								<h5 class="advantages-card__title">Гарантия интеграции решения под целевую CMS</h5>
-								<div class="advantages-card__img">
-									<img src="assets/img/adv2.png" alt="">
-								</div>
+								<figure class="advantages-card__img">
+									<img src="assets/img/adv2.png" alt="adv2.png">
+								</figure>
 							</div>
 						</div>
 					</div>
@@ -114,7 +130,7 @@
 							<div class="sticky__wrapper sticky__wrapper_left">
 
 								<div class="sticky__content sticky__content_left" data-aos="fade-up">
-	
+
 									<div class="sticky__section">
 										<h2 class="sticky__title">Разработка</h2>
 										<div class="sticky__nav sticky-nav" data-spoiler="sticky">
@@ -190,7 +206,7 @@
 											</div>
 										</nav>
 									</div>
-									
+
 									<div class="sticky__section">
 										<h2 class="sticky__title">Защита</h2>
 										<nav class="sticky__nav sticky-nav">
@@ -205,13 +221,13 @@
 											</div>
 										</nav>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
 						<div class="sticky__column sticky__column_right">
 							<div class="sticky__wrapper sticky__wrapper_right" data-sticky-item="sticky">
-								<div class="sticky__content sticky__content_right"  data-aos="fade-left">
+								<div class="sticky__content sticky__content_right" data-aos="fade-left">
 									<h5 class="sticky__title-sub">Я знаю свою работу, я люблю свою работу, <br>и я делаю свою работу хорошо</h5>
 									<blockquote class="sticky__quote">
 										<div class="sticky__quote-text">
@@ -220,19 +236,18 @@
 									</blockquote>
 									<div class="sticky__persone sticky-persone">
 										<div class="sticky-persone__name">Моисеев<br>Евгений,</div>
-										<div class="sticky-persone__position">WEB-разработчик с<br>10-летним стажем</div>
-										<div class="sticky-persone__photo">
-											<img src="assets/img/persone.png" alt="">
-										</div>
+										<div class="sticky-persone__position">WEB-разработчик с<br>8-летним стажем</div>
+										<figure class="sticky-persone__photo _ibg">
+											<img class="sticky-persone__image" src="assets/img/photo.webp" alt="Моисеев Евгений">
+										</figure>
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 				<div class="sticky__bg _ibg" data-sticky-item="sticky">
-					<img src="assets/img/background2.jpg" alt="">
+					<img src="assets/img/background2.jpg" alt="background2.webp">
 				</div>
 			</section>
 
@@ -241,11 +256,43 @@
 					<h3 class="works__title" data-aos="fade-down">Последние работы</h3>
 					<div class="works__slider works-slider" data-swiper data-aos="fade-left">
 						<div class="works-slider__slides">
+
 							<article class="works-slider__slide works-slide">
 								<div class="works-slide__body">
 									<div class="works-slide__content">
 										<div class="works-slide__tag">
-											<span class="tag tag_blue">верстка</span>
+											<span class="tag tag_1">верстка</span>
+										</div>
+										<h4 class="works-slide__title"><a href="https://galaxy4400.github.io/fitness-division/" target="_blank">Fitness Division - оборудование для фитнес-клубов и тренажерных залов</a></h4>
+										<p class="works-slide__text">Стильный многостраничный интернет-магазин</p>
+										<ul class="works-slide__list">
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/" target="_blank">Главная страница</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/cat-root.html" target="_blank">Каталог</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/cat-category.html" target="_blank">Категория каталога (сетка)</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/cat-category-row.html" target="_blank">Категория каталога (список)</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/cat-details.html" target="_blank">Страница товара</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/projects.html" target="_blank">Проекты</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/payment.html" target="_blank">Оплата</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/delivery.html" target="_blank">Доставка</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/service.html" target="_blank">Сервис</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/about.html" target="_blank">О нас</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/articles.html" target="_blank">Статьи</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/contacts.html" target="_blank">Контакты</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/cart.html" target="_blank">Корзина</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/order.html" target="_blank">Оформление заказа</a></li>
+											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/fitness-division/404.html" target="_blank">Страница 404</a></li>
+										</ul>
+									</div>
+									<figure class="works-slide__img _ibg lg-medium-zoom-item" data-src="assets/img/fitness-division.png">
+										<img src="assets/img/fitness-division.png" alt="Fitness Division - оборудование для фитнес-клубов и тренажерных залов">
+									</figure>
+								</div>
+							</article>
+							<article class="works-slider__slide works-slide">
+								<div class="works-slide__body">
+									<div class="works-slide__content">
+										<div class="works-slide__tag">
+											<span class="tag tag_1">верстка</span>
 										</div>
 										<h4 class="works-slide__title"><a href="https://galaxy4400.github.io/aurum/" target="_blank">Aurum - атмосферный ресторан с панорамным видом</a></h4>
 										<div class="works-slide__text">Стильный многостраничный сайт с множеством интересных JS решений</div>
@@ -269,7 +316,7 @@
 								<div class="works-slide__body">
 									<div class="works-slide__content">
 										<div class="works-slide__tag">
-											<span class="tag tag_red">сайт</span>
+											<span class="tag tag_2">сайт</span>
 										</div>
 										<h4 class="works-slide__title"><a href="https://msch9fmba.ru/" target="_blank">ФБУЗ МСЧ № 9 ФМБА РОССИИ</a></h4>
 										<div class="works-slide__text">Многофункциональный медицинский сайт с версией для слабовидящих и многоуровневым меню</div>
@@ -290,7 +337,7 @@
 								<div class="works-slide__body">
 									<div class="works-slide__content">
 										<div class="works-slide__tag">
-											<span class="tag tag_blue">верстка</span>
+											<span class="tag tag_1">верстка</span>
 										</div>
 										<h4 class="works-slide__title"><a href="https://galaxy4400.github.io/freshnesecom/" target="_blank">Freshnesecom - заказ еды на дом</a></h4>
 										<div class="works-slide__text">Многостраничный интернет магазин с фильтрами, галереями, корзиной и системой оплаты</div>
@@ -308,116 +355,6 @@
 									</figure>
 								</div>
 							</article>
-							<article class="works-slider__slide works-slide">
-								<div class="works-slide__body">
-									<div class="works-slide__content">
-										<div class="works-slide__tag">
-											<span class="tag tag_red">сайт</span>
-										</div>
-										<h4 class="works-slide__title"><a href="https://sila-day.ru/" target="_blank">День Силы - ежегодный технологический форум</a></h4>
-										<div class="works-slide__text">Небольшой презентационный сайт</div>
-										<ul class="works-slide__list">
-											<li class="works-slide__item"><a class="works-slide__link" href="https://sila-day.ru/" target="_blank">Главная страница</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/catalog.html" target="_blank">страница каталога</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/details.html" target="_blank">страница продукта</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/order.html" target="_blank">страница заказа</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blogs.html" target="_blank">страница блогов</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blog.html" target="_blank">страница блога</a></li>
-										</ul>
-									</div>
-									<figure class="works-slide__img _ibg" data-src="assets/img/siladay.png">
-										<img src="assets/img/siladay.png" />
-									</figure>
-								</div>
-							</article>
-							<article class="works-slider__slide works-slide">
-								<div class="works-slide__body">
-									<div class="works-slide__content">
-										<div class="works-slide__tag">
-											<span class="tag tag_red">сайт</span>
-										</div>
-										<h4 class="works-slide__title"><a href="https://saffian.ru/" target="_blank">Saffian - магазин обуви</a></h4>
-										<div class="works-slide__text">Небольшой интернет магазин</div>
-										<ul class="works-slide__list">
-											<li class="works-slide__item"><a class="works-slide__link" href="https://saffian.ru/" target="_blank">Главная страница</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/catalog.html" target="_blank">страница каталога</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/details.html" target="_blank">страница продукта</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/order.html" target="_blank">страница заказа</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blogs.html" target="_blank">страница блогов</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blog.html" target="_blank">страница блога</a></li>
-										</ul>
-									</div>
-									<figure class="works-slide__img _ibg" data-src="assets/img/saffian.png">
-										<img src="assets/img/saffian.png" />
-									</figure>
-								</div>
-							</article>
-							<article class="works-slider__slide works-slide">
-								<div class="works-slide__body">
-									<div class="works-slide__content">
-										<div class="works-slide__tag">
-											<span class="tag tag_red">сайт</span>
-										</div>
-										<h4 class="works-slide__title"><a href="https://reliefmaster.ru/" target="_blank">Relief Master - Изготовление рельефных карт по индивидуальному заказу</a></h4>
-										<div class="works-slide__text">Небольшой интернет магазин</div>
-										<ul class="works-slide__list">
-											<li class="works-slide__item"><a class="works-slide__link" href="https://reliefmaster.ru/" target="_blank">Главная страница</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/catalog.html" target="_blank">страница каталога</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/details.html" target="_blank">страница продукта</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/order.html" target="_blank">страница заказа</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blogs.html" target="_blank">страница блогов</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blog.html" target="_blank">страница блога</a></li>
-										</ul>
-									</div>
-									<figure class="works-slide__img _ibg" data-src="assets/img/reliefmaster.png">
-										<img src="assets/img/reliefmaster.png" />
-									</figure>
-								</div>
-							</article>
-							<article class="works-slider__slide works-slide">
-								<div class="works-slide__body">
-									<div class="works-slide__content">
-										<div class="works-slide__tag">
-											<span class="tag tag_red">сайт</span>
-										</div>
-										<h4 class="works-slide__title"><a href="https://wowtickets.ru/" target="_blank">WowTickets - приобретение билетов на спектакли</a></h4>
-										<div class="works-slide__text">Многостраничный сервис по продаже билетов</div>
-										<ul class="works-slide__list">
-											<li class="works-slide__item"><a class="works-slide__link" href="https://wowtickets.ru/" target="_blank">Главная страница</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/catalog.html" target="_blank">страница каталога</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/details.html" target="_blank">страница продукта</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/order.html" target="_blank">страница заказа</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blogs.html" target="_blank">страница блогов</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blog.html" target="_blank">страница блога</a></li>
-										</ul>
-									</div>
-									<figure class="works-slide__img _ibg" data-src="assets/img/wowticket.png">
-										<img src="assets/img/wowticket.png" />
-									</figure>
-								</div>
-							</article>
-							<article class="works-slider__slide works-slide">
-								<div class="works-slide__body">
-									<div class="works-slide__content">
-										<div class="works-slide__tag">
-											<span class="tag tag_blue">верстка</span>
-										</div>
-										<h4 class="works-slide__title"><a href="https://wowtickets.ru/" target="_blank">JP visualisation studio</a></h4>
-										<div class="works-slide__text">Небольшой сайт студии дизайна</div>
-										<ul class="works-slide__list">
-											<li class="works-slide__item"><a class="works-slide__link" href="https://wowtickets.ru/" target="_blank">Главная страница</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/catalog.html" target="_blank">страница каталога</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/details.html" target="_blank">страница продукта</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/order.html" target="_blank">страница заказа</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blogs.html" target="_blank">страница блогов</a></li>
-											<li class="works-slide__item"><a class="works-slide__link" href="https://galaxy4400.github.io/freshnesecom/blog.html" target="_blank">страница блога</a></li>
-										</ul>
-									</div>
-									<figure class="works-slide__img _ibg" data-src="assets/img/jp.png">
-										<img src="assets/img/jp.png" />
-									</figure>
-								</div>
-							</article>
 							<article class="works-slider__slide works-slide works-slide_fake">
 								<h4 class="works-slide__title">Здесь могла бы быть ваша работа</h4>
 							</article>
@@ -430,7 +367,7 @@
 				<div class="request__container _container-narrow">
 					<div class="request__header" data-aos="fade-down">
 						<h2 class="request__title">Оставить заявку</h2>
-						<p class="request__label">Заполните заявку и мы свяжемся с Вами</p>
+						<p class="request__label">Заполните заявку и я свяжусь с Вами</p>
 					</div>
 					<form class="request__form form form_request" action="./" method="post" data-form data-send="test" data-autocomplete-off>
 						<div class="form__section">
@@ -470,7 +407,7 @@
 									</div>
 								</div>
 								<div class="form__column" data-aos="fade-left">
-									<div class="form__row"> 
+									<div class="form__row">
 										<div class="form__column">
 											<select class="form__select" name="theme" required data-choice>
 												<option value="" selected disabled>Что Вас интересует? *</option>
@@ -510,7 +447,7 @@
 					</form>
 				</div>
 			</section>
-			
+
 		</main>
 
 		<footer class="footer">
@@ -518,7 +455,7 @@
 				<div class="footer__body" data-aos="fade-up">
 					<div class="footer__info footer-info">
 						<nav class="footer-info__socials">
-							<a class="social _icon-vk" href=""></a>
+							<a class="social _icon-tg" href="https://t.me/moiseevEO" target="_blank"></a>
 						</nav>
 						<div class="footer-info__content">
 							<div class="footer-info__logo">&#60;/<span> </span>B<span>est</span><span> </span>L<span>ayout </span>&#62;</div>
@@ -534,37 +471,29 @@
 
 	<button class="move-up" type="button" data-move-up data-goto="wrapper" data-fix-m></button>
 
-	<div class="loader"></div>
-
 
 	<div id="modal">
 
 		<div class="modal-request" data-modal="form-sended">
-			<h4 class="modal-request__title">Спасибо за Вашу заявку.<br>Наш специалист свяжется с Вами</h4>
+			<h4 class="modal-request__title">Спасибо за Вашу заявку.<br>Я свяжусь с Вами в ближайлее время</h4>
+			<div class="modal-request__text">С уважением<br>Евгений М.</div>
 		</div>
-		
+
 	</div>
 
-
 	<!-- libs -->
-	<script src="assets/js/libs/lazyload.min.js?v=2"></script>
 	<script src="assets/js/libs/choices.min.js?v=2"></script>
 	<script src="assets/js/libs/nouislider.min.js?v=2"></script>
 	<script src="assets/js/libs/inputmask.min.js?v=2"></script>
 	<script src="assets/js/libs/justvalidate.min.js?v=2"></script>
-	<script src="assets/js/libs/datepicker.min.js?v=2"></script>
 	<script src="assets/js/libs/swiper.min.js?v=2"></script>
 	<script src="assets/js/libs/lightgallery.min.js?v=2"></script>
-	<!-- <script src="assets/js/libs/parallax.min.js?v=2"></script> -->
 	<script src="assets/js/libs/aos.min.js?v=2"></script>
 
 	<!-- plugins -->
 	<script src="assets/js/plugins/adapt.js?v=2"></script>
-	<script src="assets/js/plugins/menu.js?v=2"></script>
 	<script src="assets/js/plugins/modal.js?v=2"></script>
-	<script src="assets/js/plugins/tabs.js?v=2"></script>
 	<script src="assets/js/plugins/spoiler.js?v=2"></script>
-	<script src="assets/js/plugins/rating.js?v=2"></script>
 	<script src="assets/js/plugins/sticky.js?v=2"></script>
 
 	<!-- files -->
